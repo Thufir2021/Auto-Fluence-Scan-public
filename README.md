@@ -79,7 +79,12 @@ AFS is available under a dual license model:
 | **Usage** | Non-commercial research & teaching | All commercial applications |
  
 > The source code remains proprietary. Redistribution, modification, or sublicensing is not permitted under either license.
- 
+
+---
+## Credits
+
+Example data courtesy of **Prof. Klaus Sokolowski-Tinten**,  
+University of Duisburg-Essen — used with permission.
  
 ---
 ## Contact
