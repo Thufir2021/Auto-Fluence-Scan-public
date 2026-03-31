@@ -68,6 +68,9 @@ Output: Fluence map, threshold values, beam profile report
 
 AFS is under active development. New features and performance improvements are released regularly.
 
+- [x] Add chessboard view if irridiation was done in columns and rows.
+- [ ] Update Liu-Analysis. Each pulse energy, represented as a row, has spots with now multiple spots and therefore more areas to evaluate; Take the mean value of the areas and append to one energy
+- [ ] Update Liu-Plot accordingly; Multiple dots aligned vertically to one energy , instead of one dot per energy    
 ---
 
 ## Licensing
