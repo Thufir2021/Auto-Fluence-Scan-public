@@ -10,7 +10,6 @@
 
 AFS is designed for research institutions, laser manufacturers, and industrial customers who work with laser material processing and require reproducible, high-throughput fluence measurements.
 
-![Workflow](https://github.com/user-attachments/assets/787a316c-03f3-4764-88bf-26f67178ddad)
 
 
 
