@@ -1,15 +1,14 @@
 # Auto-Fluence-Scan (AFS)
 
-> Automated laser fluence determination via Liu-method analysis — fast and accurate.
+> Automated segmentation and laser fluence determination via D²-method analysis — fast and accurate.
 
 ---
 
 ## What is AFS?
 
-**Auto-Fluence-Scan** is a Windows desktop application for the automated determination of laser fluence on irradiated materials. It uses the **Liu method** (D²-method).
+**Auto-Fluence-Scan** is a Windows desktop application for the automated analysis of laser-irradiated material images. It uses AI-based segmentation to automatically process hundreds of images, reliably identifying ablation zones before determining the laser fluence via the Liu method (D²-method).
 
 AFS is designed for research institutions, laser manufacturers, and industrial customers who work with laser material processing and require reproducible, high-throughput fluence measurements.
-
 
 
 
