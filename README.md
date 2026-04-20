@@ -1,6 +1,6 @@
 # Auto-Fluence-Scan (AFS)
 
-> Automated segmentation and laser fluence determination via D²-method analysis — fast and accurate.
+> Automated segmentation and laser fluence determination via Liu method analysis — fast and accurate.
 
 ---
 
@@ -60,10 +60,29 @@ Output: Fluence map, threshold values, beam profile report
 
 ## Use Cases
 
+**Laser Material Processing & Manufacturing**
+
 - Laser process characterization in R&D
-- Quality control in laser manufacturing
-- Beam profile analysis and monitoring
+- Quality control in laser micromachining and surface structuring
+- Ablation threshold determination for new materials
+- Process window optimization in laser drilling and cutting
 - High-throughput fluence mapping for large sample sets
+- Beam profile analysis and monitoring
+- Thin film processing and layer-by-layer ablation characterization
+- Laser cleaning and surface preparation validation
+
+**Laser Modification & Precision Engineering**
+
+- Refractive index modification in optical glasses and waveguide fabrication
+- Laser-induced periodic surface structures (LIPSS) analysis
+- Color marking and annealing on metals
+- Laser shock peening process control
+
+**Biomedical Optics**
+
+- Fluence dosimetry in photodynamic therapy (PDT)
+- Laser tissue ablation characterization for surgical parameter optimization
+- Calibration of therapeutic laser systems
 
 ---
 
@@ -73,9 +92,9 @@ Output: Fluence map, threshold values, beam profile report
 
 AFS is under active development. New features and performance improvements are released regularly.
 
-- [x] Add chessboard view if irridiation was done in columns and rows.
-- [ ] Update Liu-Analysis. Each pulse energy, represented as a row, has spots with now multiple spots and therefore more areas to evaluate; Take the mean value of the areas and append to one energy
-- [ ] Update Liu-Plot accordingly; Multiple dots aligned vertically to one energy , instead of one dot per energy    
+- [x] Add chessboard evaluation if irridiation was done in columns and rows.
+- [ ] Include Incubation effect for multi-pulse processing
+- [ ] Expand analysis for photodynamic therapy (PDT)  
 ---
 
 ## Licensing
@@ -90,10 +109,17 @@ AFS is available under a dual license model:
  
 > The source code remains proprietary. Redistribution, modification, or sublicensing is not permitted under either license.
 
+## Data Contribution
+The segmentation model in AFS was trained on real experimental image data from laser-irradiated materials. This data is kindly provided by academic research groups on a fully voluntary basis. Sharing data is entirely **optional** and has no effect on license terms or pricing. There is no obligation whatsoever.
+
+Your data will never be redistributed, published, or shared with third parties. It is used exclusively for model training within this project. Before any data is accepted, a simple Data License Agreement is signed by both parties — this document specifies exactly what you are sharing, how it will be used, and that all rights remain with you except for the granted right to use the data for model training.
+
+Every contributor is credited by name and institution in the Credits section of this repository.
+
 ---
 ## Credits
 
-Example data courtesy of **Prof. Klaus Sokolowski-Tinten**,  
+The image data shown in the Workflow video are from **Prof. Klaus Sokolowski-Tinten**,  
 University of Duisburg-Essen — used with permission.
  
 ---
