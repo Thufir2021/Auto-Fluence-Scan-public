@@ -1,21 +1,22 @@
 # Auto-Fluence-Scan (AFS)
 
-> Automated segmentation and laser fluence determination via Liu method analysis — fast and accurate.
+> Automated segmentation and laser fluence determination via Liu-Analysis.
+
+AFS is an AI-assisted desktop application designed to fully automate the workflow of the Liu analysis (also known as the D² method). Traditionally, this process requires evaluating hundreds of images by manually defining a bar diameter for each laser-irradiated spot in order to determine the fluence threshold.
+
+The proposed workflow is simple, robust, and efficient. Instead of manually assigning a bar diameter, the software segments each laser spot based on its threshold area, defined as  
+$A_{th,i} = π * r²_{th,i}$.
+
+The resulting $r²_{th,i}$ values are then plotted against the logarithm of the applied pulse energy, $ln(E)$.
+
+A linear regression of this relationship yields the slope ($r²_{0,i}$) and the x-intercept ($E_{th,i}$), corresponding to the Gaussian beam waist and the energy threshold, respectively. The fluence threshold is subsequently obtained by dividing $2 * E_{th,i}$ by $π * r²_{0,i}$.
 
 ---
 
-## What is AFS?
-
-**Auto-Fluence-Scan** is a Windows desktop application for the automated analysis of laser-irradiated material images. It uses AI-based segmentation to automatically process hundreds of images, reliably identifying ablation zones before determining the laser fluence via the Liu method (D²-method).
-
-AFS is designed for research institutions, laser manufacturers, and industrial customers who work with laser material processing and require reproducible, high-throughput fluence measurements.
-
+In this video, the laser fluence thresholds of two distinct physical processes are determined: crystallization, shown in bright light blue, and ablation, shown in dark blue. The data shown are provided with permission by Prof. Dr. Klaus Sokolowski-Tinten (University of Duisburg-Essen).
 
 
 https://github.com/user-attachments/assets/ad991a11-d838-49e3-8d5f-1b5885fb301d
-
-
-
 
 ---
 
@@ -39,7 +40,7 @@ Input: Microscopy images of laser-irradiated spots
   └─ Image Processing        ← extracts spot areas at varying pulse energies
          │
          ▼
-  [Liu-Plot Evaluation]  ← fits D²(E) curve → fluence threshold & beam radius
+  [Liu-Plot Evaluation]  ← fits r²_{0}(E) curve → fluence threshold & beam radius
          │
          ▼
 Output: Fluence map, threshold values, beam profile report
@@ -94,7 +95,8 @@ AFS is under active development. New features and performance improvements are r
 
 - [x] Add chessboard evaluation if irridiation was done in columns and rows.
 - [ ] Include Incubation effect for multi-pulse processing
-- [ ] Expand analysis for photodynamic therapy (PDT)  
+- [ ] Expand analysis for photodynamic therapy (PDT)
+- [ ] Extend Gaussian to more realistic beam profile: Airy Disk
 ---
 
 ## Licensing
@@ -119,8 +121,7 @@ Every contributor is credited by name and institution in the Credits section of 
 ---
 ## Credits
 
-The image data shown in the Workflow video are from **Prof. Klaus Sokolowski-Tinten**,  
-University of Duisburg-Essen — used with permission.
+Data courtesy of Prof. Dr. Klaus Sokolowski-Tinten (University of Duisburg-Essen).
  
 ---
 ## Contact
