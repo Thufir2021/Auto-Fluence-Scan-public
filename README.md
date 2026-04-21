@@ -13,6 +13,8 @@ A linear regression of this relationship yields the slope ($r²_{0,i}$) and the 
 
 ---
 
+## Example Workflow
+
 In this video, the laser fluence thresholds of two distinct physical processes are determined: crystallization, shown in bright light blue, and ablation, shown in dark blue. The data shown are provided with permission by Prof. Dr. Klaus Sokolowski-Tinten (University of Duisburg-Essen).
 
 
