@@ -24,10 +24,10 @@ https://github.com/user-attachments/assets/ad991a11-d838-49e3-8d5f-1b5885fb301d
 
 ## Key Features
 
+- **Robust spot detection** — reliable segmentation even in low-contrast or out-of-focus images (see examples)
 - **Automated Liu-Analysis** — fully automated determination of any threshold and beam radius from irradiation spot data
 - **Large-scale image processing** — C++/CUDA-accelerated backend for fast evaluation of large image datasets
 - **AI-assisted segmentation** — Convolutional Attention U-Net model (Python) for robust, automated spot detection
-- **Scalable** — from single measurements to batch processing of thousands of images
 
 ---
 
@@ -45,7 +45,7 @@ Input: Microscopy images of laser-irradiated spots
   [Liu-Plot Evaluation]  ← fits r²_{0}(E) curve → fluence threshold & beam radius
          │
          ▼
-Output: Fluence map, threshold values, beam profile report
+Output: Overlay images (original images + contours), contour areas, fluence thresholds
 ```
 
 ---
