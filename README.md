@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/ad991a11-d838-49e3-8d5f-1b5885fb301d
 
 ## Key Features
 
-- **Robust contour detection** — reliable segmentation even in low-contrast or out-of-focus images (see examples)
+- **Robust contour detection** — reliable segmentation even in low-contrast, out-of-focus or noisy images (see examples)
 - **Automated Liu-Analysis** — fully automated determination of any threshold and beam radius from irradiation spot data
 - **Large-scale image processing** — C++/CUDA-accelerated backend for fast evaluation of large image datasets
 - **AI-assisted segmentation** — Convolutional Attention U-Net model (Python) for robust, automated spot detection
