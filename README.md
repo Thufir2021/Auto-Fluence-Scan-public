@@ -46,26 +46,10 @@ https://github.com/user-attachments/assets/ad991a11-d838-49e3-8d5f-1b5885fb301d
 
 ## How It Works
 
-```
-Step 1 — Load
-  Image stack of laser-irradiated spots + per-image pulse energies
-         │
-         ▼
-Step 2 — Determine threshold areas (any one method, freely combinable)
-  ├─ Classical image processing     ← no AI model
-  ├─ AI-assisted: Attention U-Net   ← in-house model, LibTorch/C++ inference
-  └─ AI-assisted: FastSAM ensemble  ← Python
-         │
-         ▼
-Step 3 — Refine, only where needed
-  Interactive point-click correction via a pluggable open model
-  (SAM2 by default, FastSAM-compatible)
-         │
-         ▼
-Step 4 — Liu evaluation (automatic, no extra click)
-  r²(E) fit as soon as areas + energies exist → fluence threshold & beam radius
-  Verify via the table, the Liu-plot diagram, or the contour masks on the images
-```
+1. **Load** — image stack of laser-irradiated spots + the per-image pulse energies.
+2. **Determine threshold areas** — via one of three interchangeable methods: classical image processing (no AI model), an in-house Attention U-Net (LibTorch/C++), or a FastSAM ensemble (Python). Freely combinable per image.
+3. **Refine, only if needed** — point-click correction via a pluggable open model (SAM2 by default, FastSAM-compatible).
+4. **No extra effort** — as soon as areas and energies exist, the Liu evaluation runs immediately. Verify it via the table, the Liu-plot diagram, or the contour masks directly on the images.
 
 ---
 
