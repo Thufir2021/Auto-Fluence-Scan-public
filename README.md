@@ -37,27 +37,34 @@ https://github.com/user-attachments/assets/ad991a11-d838-49e3-8d5f-1b5885fb301d
 ## Key Features
 
 - **Robust contour detection** — reliable segmentation even in low-contrast, out-of-focus or noisy images (see examples)
-- **Automated Liu-Analysis** — fully automated determination of any threshold and beam radius from irradiation spot data
+- **Three interchangeable ways to determine threshold areas** — classical image processing, an in-house Attention U-Net (LibTorch, C++), or a FastSAM ensemble (Python); freely combinable per image
+- **Interactive point-click refinement** — for the few spots that need it, correct a contour with a click via a pluggable open segmentation model (SAM2 by default, swappable for FastSAM or any compatible backend)
+- **Automated Liu-Analysis** — as soon as areas and energies are present, the fit runs immediately, no separate "evaluate" step
 - **Large-scale image processing** — C++/CUDA-accelerated backend for fast evaluation of large image datasets
-- **AI-assisted segmentation** — Convolutional Attention U-Net model (Python) for robust, automated spot detection
 
 ---
 
 ## How It Works
 
 ```
-Input: Microscopy images of laser-irradiated spots
+Step 1 — Load
+  Image stack of laser-irradiated spots + per-image pulse energies
          │
          ▼
-  [CUDA-accelerated Pipeline]
-  ├─ U-Net Segmentation      ← detects and segments ablation spots
-  └─ Image Processing        ← extracts spot areas at varying pulse energies
+Step 2 — Determine threshold areas (any one method, freely combinable)
+  ├─ Classical image processing     ← no AI model
+  ├─ AI-assisted: Attention U-Net   ← in-house model, LibTorch/C++ inference
+  └─ AI-assisted: FastSAM ensemble  ← Python
          │
          ▼
-  [Liu-Plot Evaluation]  ← fits r²_{0}(E) curve → fluence threshold & beam radius
+Step 3 — Refine, only where needed
+  Interactive point-click correction via a pluggable open model
+  (SAM2 by default, FastSAM-compatible)
          │
          ▼
-Output: Overlay images (original images + contours), contour areas, fluence thresholds
+Step 4 — Liu evaluation (automatic, no extra click)
+  r²(E) fit as soon as areas + energies exist → fluence threshold & beam radius
+  Verify via the table, the Liu-plot diagram, or the contour masks on the images
 ```
 
 ---
@@ -66,7 +73,8 @@ Output: Overlay images (original images + contours), contour areas, fluence thre
 
 | Component | Technology |
 |---|---|
-| Spot Segmentation | Convolutional Attention U-Net (LibTorch, C++ inference) |
+| Automated Segmentation | Classical CV, in-house Attention U-Net (LibTorch, C++), or FastSAM ensemble (Python) — selectable per run |
+| Interactive Refinement | Pluggable open model, SAM2 by default, FastSAM-compatible |
 | Image Processing | C++ with CUDA support |
 | Analysis Engine | Liu-method (Liu-Plot) |
 | Interface | Windows Desktop Software |
