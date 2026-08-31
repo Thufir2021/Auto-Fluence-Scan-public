@@ -1,0 +1,89 @@
+site_name: FluenceScan Handbuch
+site_description: >-
+  Nutzerhandbuch für FluenceScan - Bestimmung der laserinduzierten
+  Zerstörschwelle (Fluenzschwelle) aus Bildstapeln.
+site_url: https://thufir2021.github.io/Auto-Fluence-Scan-public/
+repo_url: https://github.com/Thufir2021/Auto-Fluence-Scan-public
+repo_name: Auto-Fluence-Scan-public
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+# Issue #130 (Offline-Nutzung): flache .html-Dateien statt Ordner+index.html
+# je Seite - MkDocs' Standard-Linkformat ("installation/" statt
+# "installation.html") setzt einen Webserver voraus, der Verzeichnisse
+# automatisch auf ihre index.html auflöst. Unter file:// (Doppelklick ohne
+# lokalen Server) zeigen Browser dort nur eine leere Verzeichnisliste.
+use_directory_urls: false
+
+# Issue #130: ersetzt das Platzhalter-PDF (scripts/make_dummy_doc_pdf.py) als
+# Ziel von Hilfe > "Dokumentation anzeigen". Nummerierung der Kapitel folgt
+# bewusst dem tatsächlichen Bedienungsablauf in der App (Installation -> Stapel
+# laden -> Auswertung -> Zusatzfunktionen -> Einstellungen), nicht dem
+# Menüband von links nach rechts.
+
+theme:
+  name: material
+  language: de
+  # Issue #130 (Offline-Nutzung): kein Nachladen von Google Fonts per CDN -
+  # Material bindet sonst standardmäßig "Roboto" über fonts.googleapis.com
+  # ein. false = feste Systemschriftart, kein Netzwerkzugriff beim Öffnen.
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Dunkelmodus aktivieren
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Hellmodus aktivieren
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+# Volltextsuche bewusst AUS (Issue #130 - Offline-Nutzung): das Handbuch wird
+# als lose HTML-Dateien neben der .exe ausgeliefert (siehe
+# QtApp/cpp/resources/docs/ + CMakeLists.txt-Kopierschritt), Nutzer:innen
+# öffnen es per Doppelklick/QDesktopServices ohne lokalen Webserver. Chromium
+# (Chrome/Edge) blockiert das fetch() der Suchindex-Datei unter file:// aus
+# Sicherheitsgründen - Firefox nicht. Statt einer Suche, die je nach
+# Standardbrowser mal geht und mal nicht, lieber ganz weglassen; bei 5
+# Kapiteln reicht die Navigation links.
+plugins:
+  - search:
+      enabled: false
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      title: Auf dieser Seite
+
+nav:
+  - Start: index.md
+  - 1. Installation: installation.md
+  - 2. Analyse starten: analyse-starten.md
+  - 3. Zusatzfunktionen: zusatzfunktionen.md
+  - 4. Einstellungen: einstellungen.md
+  - 5. Hilfe & Support: hilfe-support.md
+  - A. Anhang: anhang.md
