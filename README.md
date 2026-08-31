@@ -2,6 +2,8 @@
 
 > Automated segmentation and laser fluence determination via Liu-Analysis.
 
+🔬 **Status: Alpha** — early prototype currently in evaluation with academic early-access partners, ahead of a wider Beta and v1.0 release. See [Project Status & Roadmap](#project-status--roadmap).
+
 AFS is an AI-assisted desktop application designed to fully automate the workflow of the Liu analysis (also known as the D² method). Traditionally, this process requires evaluating hundreds of images by manually defining a bar diameter for each laser-irradiated spot in order to determine the fluence threshold.
 
 The proposed workflow is simple, robust, and efficient. Instead of manually assigning a bar diameter, the software segments each laser spot based on its threshold area, defined as  
@@ -10,6 +12,16 @@ $A_{th,i} = π * r²_{th,i}$.
 The resulting $r²_{th,i}$ values are then plotted against the logarithm of the applied pulse energy, $ln(E)$.
 
 A linear regression of this relationship yields the slope ($r²_{0,i}$) and the x-intercept ($E_{th,i}$), corresponding to the Gaussian beam waist and the energy threshold, respectively. The fluence threshold is subsequently obtained by dividing $2 * E_{th,i}$ by $π * r²_{0,i}$.
+
+---
+
+## 📖 Documentation
+
+The full user handbook — installation, the step-by-step analysis workflow, additional features, settings, and the physics/math behind the Liu analysis (incubation model, aperture correction for non-Gaussian beams) — is published here:
+
+👉 **[thufir2021.github.io/Auto-Fluence-Scan-public](https://thufir2021.github.io/Auto-Fluence-Scan-public/)** *(German)*
+
+The same handbook ships with the app itself for offline use (**Help → Show Documentation**). This README stays a short overview — for anything operational, the handbook is the reference.
 
 ---
 
@@ -89,16 +101,27 @@ Output: Overlay images (original images + contours), contour areas, fluence thre
 
 ---
 
-## Status
+## Project Status & Roadmap
 
 > This repository is public to show what AFS is. The source code is available to customers and partners under license agreement.
 
-AFS is under active development. New features and performance improvements are released regularly.
+AFS is under active development and currently in its **Alpha stage**: a working, unlicensed prototype shared with a small group of academic early-access partners to gather honest, independent feedback before a wider release. A refined **Beta** for industry partners and the licensed **v1.0.0** launch follow in sequence:
 
-- [x] Add chessboard evaluation if irridiation was done in columns and rows.
-- [ ] Include Incubation effect for multi-pulse processing
+| Stage | Audience | Purpose |
+|---|---|---|
+| 🔬 **Alpha** *(current)* | Academic early-access partners | Independent feedback on methodology & usability — free, no license terms attached |
+| 🧪 **Beta** | Selected industry partners | Evaluation copy with purchase option, refined using Alpha feedback |
+| 🚀 **v1.0.0** | Public / commercial launch | Full dual license (see below); in-app version display distinguishes Alpha / Beta / v1.0 |
+
+Interested in early access for your lab? See [Contact](#contact).
+
+**Feature roadmap:**
+
+- [x] Add chessboard evaluation if irradiation was done in columns and rows.
+- [ ] Include incubation effect for multi-pulse processing
 - [ ] Expand analysis for photodynamic therapy (PDT)
 - [ ] Extend Gaussian to more realistic beam profile: Airy Disk
+
 ---
 
 ## Licensing
