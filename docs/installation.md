@@ -7,6 +7,15 @@ möglich. Eine NVIDIA-GPU mit CUDA-Unterstützung beschleunigt die
 Segmentierung, ist für den Betrieb aber nicht erforderlich - ohne GPU läuft
 die Berechnung automatisch auf der CPU (nur langsamer).
 
+!!! note "Installationsgröße (~2 GB)"
+    Der Installer dieser Alpha-Version installiert die CUDA/cuDNN-Runtime
+    immer mit, unabhängig davon, ob eine NVIDIA-GPU vorhanden ist - daher
+    die vergleichsweise große Downloadgröße. Das ist unbedenklich: Ist keine
+    kompatible GPU vorhanden, laufen die Berechnungen automatisch und ohne
+    weiteres Zutun auf der CPU, die mitinstallierten CUDA-Komponenten bleiben
+    dann einfach ungenutzt. Eine schlankere Installationsoption ohne
+    CUDA/cuDNN ist für eine künftige Version geplant.
+
 Für die interaktive **Punkt-Klick-Nachsegmentierung** (Kapitel
 [2.2](analyse-starten.md#22-auswertung-starten)) ist zusätzlich eine lokale
 Python-Installation (Version 3.10 oder höher) mit dem Paket `sam2`
