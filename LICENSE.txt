@@ -1,0 +1,51 @@
+FluenceScan (AFS)
+Copyright (c) 2026 David Karapetjan. All rights reserved.
+
+THIS IS NOT OPEN-SOURCE SOFTWARE.
+
+Publishing this repository is solely to describe the project (see README.md)
+and to distribute release binaries to evaluators and licensees. No license
+to the source code is granted by making this repository public, and no
+source code is contained in it.
+
+Current status: Alpha
+----------------------
+Builds currently distributed from this repository are an unreleased Alpha
+version, made available free of charge to a small group of academic
+early-access partners for independent evaluation and feedback. No purchase,
+subscription, or license fee applies to this Alpha stage, and no rights
+beyond internal, non-commercial evaluation for the agreed evaluation period
+are granted. Redistribution to third parties is not permitted.
+
+Planned license model (from v1.0.0)
+------------------------------------
+Starting with the v1.0.0 release, FluenceScan will be distributed under a
+dual license:
+
+  - Academic License   - 500 EUR / year  - universities and research
+                          institutes, non-commercial research and teaching.
+  - Commercial License  - 2000 EUR / year - companies and industrial users,
+                          all commercial applications.
+
+The source code remains proprietary under either license. Redistribution,
+modification, or sublicensing is not permitted. See README.md ("Licensing")
+for the current summary, and contact david.karapetjan@icloud.com for the
+full license agreement text.
+
+Third-party components bundled in release builds
+---------------------------------------------------
+- SAM2 (Meta), default segmentation backend .......... Apache License 2.0
+- OpenCV .............................................. Apache License 2.0
+- ITK .................................................. Apache License 2.0
+- LibTorch / PyTorch ................................... BSD-3-Clause
+- Qt (dynamically linked) .............................. GNU LGPLv3
+
+The optional Ultralytics/AGPL-3.0 segmentation backend is NOT bundled with
+release builds distributed from this repository.
+
+Training data
+--------------
+The segmentation model was trained in part on experimental image data
+provided by Prof. Dr. Klaus Sokolowski-Tinten, Faculty of Physics,
+University of Duisburg-Essen. See README.md ("Data Contribution") for how
+further data contributions are handled.
