@@ -4,14 +4,7 @@
 
 🔬 **Status: Alpha** — early prototype currently in evaluation with academic early-access partners, ahead of a wider Beta and v1.0 release. See [Project Status & Roadmap](#project-status--roadmap).
 
-AFS is an AI-assisted desktop application designed to fully automate the workflow of the Liu analysis (also known as the D² method). Traditionally, this process requires evaluating hundreds of images by manually defining a bar diameter for each laser-irradiated spot in order to determine the fluence threshold.
-
-The proposed workflow is simple, robust, and efficient. Instead of manually assigning a bar diameter, the software segments each laser spot based on its threshold area, defined as  
-$A_{th,i} = π * r²_{th,i}$.
-
-The resulting $r²_{th,i}$ values are then plotted against the logarithm of the applied pulse energy, $ln(E)$.
-
-A linear regression of this relationship yields the slope ($r²_{0,i}$) and the x-intercept ($E_{th,i}$), corresponding to the Gaussian beam waist and the energy threshold, respectively. The fluence threshold is subsequently obtained by dividing $2 * E_{th,i}$ by $π * r²_{0,i}$.
+AFS is an AI-assisted desktop application designed to fully automate the workflow of the Liu analysis (also known as the D² method). Traditionally, this process requires evaluating hundreds of images by manually defining one or many bar diameter for each laser-irradiated spot in order to determine the fluence threshold.
 
 ---
 
