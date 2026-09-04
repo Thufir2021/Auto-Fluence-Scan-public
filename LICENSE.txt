@@ -20,12 +20,7 @@ are granted. Redistribution to third parties is not permitted.
 Planned license model (from v1.0.0)
 ------------------------------------
 Starting with the v1.0.0 release, FluenceScan will be distributed under a
-dual license:
-
-  - Academic License   - 500 EUR / year  - universities and research
-                          institutes, non-commercial research and teaching.
-  - Commercial License  - 2000 EUR / year - companies and industrial users,
-                          all commercial applications.
+dual license
 
 The source code remains proprietary under either license. Redistribution,
 modification, or sublicensing is not permitted. See README.md ("Licensing")
