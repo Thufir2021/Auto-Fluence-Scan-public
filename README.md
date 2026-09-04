@@ -12,6 +12,11 @@ The Alpha version is a free test version with no obligation to purchase. After a
 
 The installer is provided separately in a private GitHub repository. Documentation, Updates and release information will also be published there. To grant you access to the private repository, I will need your GitHub username.
 
+AFS relies on the work of:
+1) Liu, J.M. (1982) — "Simple technique for measurements of pulsed Gaussian‑beam spot sizes," Opt. Lett. 7(5), 196–198
+2) Garcia‑Lechuga, M. & Grojo, D. (2021) — "Simple and robust method for determination of laser fluence thresholds for material modifications: an extension of Liu's approach to imperfect beams," Open Research Europe 1:7
+3) Jee, Y., Becker, M.F. & Walser, R.M. (1988) — "Laser‑induced damage on single‑crystal metal surfaces", JOSA B 5(3), 648–659
+
 ---
 
 ## 📖 3-Step Workflow
