@@ -35,7 +35,10 @@ Once the images have been segmented and the corresponding areas and energies hav
 In this video, the laser fluence thresholds of two distinct physical processes are determined: crystallization, shown in bright light blue, and ablation, shown in dark blue. The data shown are provided with permission by Prof. Dr. Klaus Sokolowski-Tinten (University of Duisburg-Essen).
 
 
-▶️ [Watch the example workflow video](assets/videos/example-workflow.mp4)
+
+
+https://github.com/user-attachments/assets/4151e7f8-b80d-4b15-92e0-fff39c37a35f
+
 
 ---
 
