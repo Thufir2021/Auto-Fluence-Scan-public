@@ -1,5 +1,0 @@
-# Zum lokalen Bauen dieses Handbuchs:
-#   pip install -r requirements-docs.txt
-#   mkdocs serve   (lokale Vorschau unter http://127.0.0.1:8000)
-#   mkdocs build   (statische Seite nach ./site/)
-mkdocs-material>=9.5,<10
